@@ -10,7 +10,6 @@ import javafx.scene.text.Text;
 public class ScoreboardController {
 
 
-
     // Scoreboard Elements
 
     @FXML
