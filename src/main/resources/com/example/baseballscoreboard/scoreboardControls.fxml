@@ -12,45 +12,45 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.baseballscoreboard.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.baseballscoreboard.ScoreboardController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#999999" height="127.0" stroke="#999999" strokeType="INSIDE" width="840.0" />
-      <Button fx:id="minusOneButton" layoutX="336.0" layoutY="30.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="70.0" text="-1">
+      <Button fx:id="minusOneButton" layoutX="336.0" layoutY="30.0" mnemonicParsing="false" onAction="#minusOneButtonF" prefHeight="57.0" prefWidth="70.0" text="-1">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="plusOneButton" layoutX="434.0" layoutY="31.0" mnemonicParsing="false" text="+1">
+      <Button fx:id="plusOneButton" layoutX="434.0" layoutY="31.0" mnemonicParsing="false" onAction="#plusOneButtonF" text="+1">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="plusTwoButton" layoutX="516.0" layoutY="31.0" mnemonicParsing="false" text="+2">
+      <Button fx:id="plusTwoButton" layoutX="516.0" layoutY="31.0" mnemonicParsing="false" onAction="#plusTwoButtonF" text="+2">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="minusTwoButton" layoutX="254.0" layoutY="30.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="70.0" text="-2">
+      <Button fx:id="minusTwoButton" layoutX="254.0" layoutY="30.0" mnemonicParsing="false" onAction="#minusTwoButtonF" prefHeight="57.0" prefWidth="70.0" text="-2">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="minusThreeButton" layoutX="170.0" layoutY="29.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="70.0" text="-3">
+      <Button fx:id="minusThreeButton" layoutX="170.0" layoutY="29.0" mnemonicParsing="false" onAction="#minusThreeButtonF" prefHeight="57.0" prefWidth="70.0" text="-3">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="minusFourButton" layoutX="86.0" layoutY="30.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="70.0" text="-4">
+      <Button fx:id="minusFourButton" layoutX="86.0" layoutY="30.0" mnemonicParsing="false" onAction="#minusFourButtonF" prefHeight="57.0" prefWidth="70.0" text="-4">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="plusThreeButton" layoutX="599.0" layoutY="31.0" mnemonicParsing="false" text="+3">
+      <Button fx:id="plusThreeButton" layoutX="599.0" layoutY="31.0" mnemonicParsing="false" onAction="#plusThreeButtonF" text="+3">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="plusFourButton" layoutX="683.0" layoutY="31.0" mnemonicParsing="false" text="+4">
+      <Button fx:id="plusFourButton" layoutX="683.0" layoutY="31.0" mnemonicParsing="false" onAction="#plusFourButtonF" text="+4">
          <font>
             <Font size="27.0" />
          </font>
