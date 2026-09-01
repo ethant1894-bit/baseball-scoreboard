@@ -36,4 +36,25 @@ public class ScoreboardController {
 
     @FXML
     private Text pitchCount;
+
+    @FXML
+    private Text battingAverage;
+
+    @FXML
+    private Text tm1Name;
+
+    @FXML
+    private Text tm2Name;
+
+    @FXML
+    private Text tm1Score;
+
+    @FXML
+    private Text tm2Score;
+
+    @FXML
+    private Text balls;
+
+    @FXML
+    private Text strikes;
 }
