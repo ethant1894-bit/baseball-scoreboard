@@ -4,6 +4,7 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Polygon?>
@@ -159,5 +160,8 @@
       <TextArea layoutX="180.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Batter Stats" />
       <TextArea layoutX="458.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Pitcher Stats" />
       <Line endX="14.0" layoutX="406.0" layoutY="372.0" startX="14.0" startY="252.0" />
+      <TextField fx:id="tm1NameField" layoutX="317.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
+      <TextField fx:id="tm2NameField" layoutX="479.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
+      <Button layoutX="384.0" layoutY="321.0" mnemonicParsing="false" text="Set Names" />
    </children>
 </AnchorPane>
