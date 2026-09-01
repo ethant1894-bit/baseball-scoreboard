@@ -153,13 +153,10 @@ public class ConsoleController {
         if (Game.isTeam1turn()) {
             Game.setTeam1Points(Game.getTeam1Points() + addition);
         } else {
-            Game.setTeam1Points(Game.getTeam1Points() + addition);
+            Game.setTeam2Points(Game.getTeam2Points() + addition);
         }
-        tm1Score.setText(String.valueOf(team1Points));
-        tm2Score.setText(String.valueOf(team2Points));
-        consoleTm1Score.setText(String.valueOf(team1Points));
-        consoleTm2Score.setText(String.valueOf(team2Points));
-        team1turn = !team1turn;
+        consoleTm1Score.setText(String.valueOf(Game.getTeam1Points()));
+        consoleTm2Score.setText(String.valueOf(Game.getTeam2Points()));
     }
 
     @FXML

@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 
+
 public class ScoreboardController {
 
 
@@ -60,5 +61,7 @@ public class ScoreboardController {
     @FXML
     private Text strikes;
 }
+
+
 
 
