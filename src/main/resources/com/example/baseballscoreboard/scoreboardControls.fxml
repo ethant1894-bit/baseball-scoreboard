@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.baseballscoreboard.HelloController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#999999" height="127.0" stroke="#999999" strokeType="INSIDE" width="840.0" />
       <Button fx:id="minusOneButton" layoutX="336.0" layoutY="30.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="70.0" text="-1">
@@ -90,16 +90,10 @@
       <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" text="Remove Ball" />
       <Button fx:id="inningChangeToggle" layoutX="683.0" layoutY="258.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" layoutX="320.0" layoutY="243.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="339.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="43.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="458.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="43.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="325.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text fx:id="consoleTm1Name" layoutX="349.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM1" />
       <Text fx:id="consoleTm2Name" layoutX="468.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM2" />
-      <Text fx:id="consoleTm1Score" layoutX="349.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Text>
-      <Text fx:id="consoleTm2Score" layoutX="469.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="consoleTm1Score" layoutX="328.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="40.0" />
          </font>
@@ -120,8 +114,8 @@
          </font>
       </Text>
       <Text fx:id="consoleOutCount" layoutX="432.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Outs" />
-      <Polygon fx:id="consoleInningIndicator" layoutX="608.0" layoutY="316.0" points="-21.600006103515625, -14.5999755859375, 21.79998779296875, -14.5999755859375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fx:id="consoleInningNumber" layoutX="631.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Polygon fx:id="consoleInningIndicator" layoutX="592.0" layoutY="316.0" points="-21.600006103515625, -14.5999755859375, 21.79998779296875, -14.5999755859375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="consoleInningNumber" layoutX="615.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="61.0" />
          </font>
@@ -157,11 +151,17 @@
       <Button fx:id="removeAtBat" layoutX="53.0" layoutY="570.0" mnemonicParsing="false" text="Remove At Bat" />
       <Button fx:id="addPitch" layoutX="723.0" layoutY="469.0" mnemonicParsing="false" text="Add Pitch" />
       <Button fx:id="removePitch" layoutX="702.0" layoutY="504.0" mnemonicParsing="false" text="Remove Pitch" />
-      <TextArea layoutX="180.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Batter Stats" />
-      <TextArea layoutX="458.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Pitcher Stats" />
+      <TextArea fx:id="batterStats" layoutX="180.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Batter Stats" />
+      <TextArea fx:id="pitcherStats" layoutX="458.0" layoutY="395.0" prefHeight="200.0" prefWidth="200.0" promptText="Pitcher Stats" />
       <Line endX="14.0" layoutX="406.0" layoutY="372.0" startX="14.0" startY="252.0" />
       <TextField fx:id="tm1NameField" layoutX="317.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
       <TextField fx:id="tm2NameField" layoutX="479.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
-      <Button layoutX="384.0" layoutY="321.0" mnemonicParsing="false" text="Set Names" />
+      <Button fx:id="setNameButton" layoutX="384.0" layoutY="321.0" mnemonicParsing="false" text="Set Names" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="445.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Text fx:id="consoleTm2Score" layoutX="447.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
