@@ -46,7 +46,10 @@ public class Game {
     }
 
     public void setOuts(int outsInt) {
-        this.outs.set(String.valueOf(outsInt));
+        if (outsInt <= 3 && outsInt >= 0) {
+            this.outs.set(String.valueOf(outsInt));
+        }
+
     }
 
     public SimpleStringProperty getBalls() {
@@ -54,7 +57,9 @@ public class Game {
     }
 
     public void setBalls(int ballsInt) {
-        this.balls.set(String.valueOf(ballsInt));
+        if (ballsInt <= 4 && ballsInt >= 0) {
+            this.balls.set(String.valueOf(ballsInt));
+        }
     }
 
     public SimpleStringProperty getStrikes() {
@@ -62,7 +67,9 @@ public class Game {
     }
 
     public void setStrikes(int strikesInt) {
-        this.strikes.set(String.valueOf(strikesInt));
+        if (strikesInt <= 3 && strikesInt >= 0) {
+            this.strikes.set(String.valueOf(strikesInt));
+        }
     }
 
 
@@ -71,7 +78,9 @@ public class Game {
     }
 
     public void setTeam2Points(int team2PointsInt) {
-        this.team2Points.set(String.valueOf(team2PointsInt));
+        if (team2PointsInt >= 0) {
+            this.team2Points.set(String.valueOf(team2PointsInt));
+        }
     }
 
     public SimpleStringProperty getTeam1Points() {
@@ -79,7 +88,9 @@ public class Game {
     }
 
     public void setTeam1Points(int team1PointsInt) {
-        this.team1Points.set(String.valueOf(team1PointsInt));
+        if (team1PointsInt >= 0) {
+            this.team1Points.set(String.valueOf(team1PointsInt));
+        }
     }
 
     public boolean isTeam1turn() {
