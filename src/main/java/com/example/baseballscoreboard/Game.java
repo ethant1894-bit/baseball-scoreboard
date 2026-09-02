@@ -1,17 +1,45 @@
 package com.example.baseballscoreboard;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class Game {
     private boolean team1turn = true;
+
+    // Score, BSO
     private final SimpleStringProperty team1Points = new SimpleStringProperty(String.valueOf(0));
     private final SimpleStringProperty team2Points = new SimpleStringProperty(String.valueOf(0));
     private final SimpleStringProperty balls = new SimpleStringProperty(String.valueOf(0));
     private final SimpleStringProperty strikes = new SimpleStringProperty(String.valueOf(0));
     private final SimpleStringProperty outs = new SimpleStringProperty(String.valueOf(0));
+
+    // Bases (using properties to update info live on scoreboard and console)
+    private final SimpleBooleanProperty firstBase = new SimpleBooleanProperty(false);
+    private final SimpleBooleanProperty secondBase = new SimpleBooleanProperty(false);
+    private final SimpleBooleanProperty thirdBase = new SimpleBooleanProperty(false);
+
+    public SimpleBooleanProperty getFirstBase() {
+        return firstBase;
+    }
+
+    public void setFirstBase(boolean b) {
+        this.firstBase.set(b);
+    }
+
+    public SimpleBooleanProperty getSecondBase() {
+        return secondBase;
+    }
+
+    public void setSecondBase(boolean b) {
+        this.secondBase.set(b);
+    }
+
+    public SimpleBooleanProperty getThirdBase() {
+        return thirdBase;
+    }
+
+    public void setThirdBase(boolean b) {
+        this.thirdBase.set(b);
+    }
 
     public SimpleStringProperty getOuts() {
         return outs;

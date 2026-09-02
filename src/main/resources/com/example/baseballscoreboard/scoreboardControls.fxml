@@ -76,15 +76,15 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="secondBaseButton" layoutX="100.0" layoutY="184.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
-      <Button fx:id="thirdBaseButton" layoutX="41.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
-      <Button fx:id="firstBaseButton" layoutX="154.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
+      <Button fx:id="secondBaseButton" layoutX="100.0" layoutY="184.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" onAction="#toggleSecondBase" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
+      <Button fx:id="thirdBaseButton" layoutX="41.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" onAction="#toggleThirdBase" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
+      <Button fx:id="firstBaseButton" layoutX="154.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" onAction="#toggleFirstBase" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
       <Button fx:id="outButton" layoutX="504.0" layoutY="141.0" mnemonicParsing="false" onAction="#addOut" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #000000;" text="OUT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="resetBases" layoutX="94.0" layoutY="334.0" mnemonicParsing="false" text="Reset Bases" />
+      <Button fx:id="resetBases" layoutX="94.0" layoutY="334.0" mnemonicParsing="false" onAction="#resetBases" text="Reset Bases" />
       <Button fx:id="removeOut" layoutX="510.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeOut" text="Remove Out" />
       <Button fx:id="removeStrike" layoutX="307.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeStrike" text="Remove Strike" />
       <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeBall" text="Remove Ball" />

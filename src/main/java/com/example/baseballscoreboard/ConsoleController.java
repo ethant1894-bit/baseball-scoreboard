@@ -1,11 +1,17 @@
 package com.example.baseballscoreboard;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 
@@ -158,6 +164,10 @@ public class ConsoleController {
 
     private Game game;
 
+    // Base Toggle Colours
+    Background onBaseBG = new Background(new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY));
+    Background notOnBaseBG = new Background(new BackgroundFill(Color.GRAY, CornerRadii.EMPTY, Insets.EMPTY));
+
     public void setGame(Game gameModel) {
         this.game = gameModel;
         consoleTm1Score.textProperty().bind(game.getTeam1Points());
@@ -165,6 +175,9 @@ public class ConsoleController {
         consoleBallCount.textProperty().bind(game.getBalls());
         consoleStrikeCount.textProperty().bind(game.getStrikes());
         consoleOutCount.textProperty().bind(game.getOuts());
+        firstBaseButton.backgroundProperty().bind(Bindings.when(game.getFirstBase()).then(onBaseBG).otherwise(notOnBaseBG));
+        secondBaseButton.backgroundProperty().bind(Bindings.when(game.getSecondBase()).then(onBaseBG).otherwise(notOnBaseBG));
+        thirdBaseButton.backgroundProperty().bind(Bindings.when(game.getThirdBase()).then(onBaseBG).otherwise(notOnBaseBG));
     }
 
     // Console Methods
@@ -273,6 +286,38 @@ public class ConsoleController {
     public void resetCount() {
         game.setBalls(0);
         game.setStrikes(0);
+    }
+
+    private void toggleBase(int base) {
+        if (base == 1) {
+            game.setFirstBase(!game.getFirstBase().get());
+        } else if (base == 2) {
+            game.setSecondBase(!game.getSecondBase().get());
+        } else if (base == 3) {
+            game.setThirdBase(!game.getThirdBase().get());
+        }
+    }
+
+    @FXML
+    public void toggleFirstBase() {
+        toggleBase(1);
+    }
+
+    @FXML
+    public void toggleSecondBase() {
+        toggleBase(2);
+    }
+
+    @FXML
+    public void toggleThirdBase() {
+        toggleBase(3);
+    }
+
+    @FXML
+    public void resetBases() {
+        game.setFirstBase(false);
+        game.setSecondBase(false);
+        game.setThirdBase(false);
     }
 
 }
