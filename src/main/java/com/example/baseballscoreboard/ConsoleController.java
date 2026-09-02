@@ -1,12 +1,18 @@
 package com.example.baseballscoreboard;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 
 public class ConsoleController {
     // Console Elements
@@ -143,59 +149,62 @@ public class ConsoleController {
     @FXML
     private TextArea pitcherStats;
 
-    @FXML
-    public void initialize() {
+    private Game game;
 
+    public void setGame(Game gameModel) {
+        this.game = gameModel;
+        consoleTm1Score.textProperty().bind(game.getTeam1Points());
+        consoleTm2Score.textProperty().bind(game.getTeam2Points());
     }
 
     // Console Methods
-    private void addXtoScore(int addition) {
-        if (Game.isTeam1turn()) {
-            Game.setTeam1Points(Game.getTeam1Points() + addition);
+    // TODO: Add proper error checking through try/catch
+    private void addXtoScore(int addition) throws IOException {
+        if (game.isTeam1turn()) {
+            game.setTeam1Points(Integer.parseInt(game.getTeam1Points().get()) + addition);
         } else {
-            Game.setTeam2Points(Game.getTeam2Points() + addition);
+            game.setTeam2Points(Integer.parseInt(game.getTeam2Points().get()) + addition);
         }
-        consoleTm1Score.setText(String.valueOf(Game.getTeam1Points()));
-        consoleTm2Score.setText(String.valueOf(Game.getTeam2Points()));
     }
 
     @FXML
-    public void plusOneButtonF() {
+    public void plusOneButtonF() throws IOException {
         addXtoScore(1);
     }
 
     @FXML
-    public void plusTwoButtonF() {
+    public void plusTwoButtonF() throws IOException {
         addXtoScore(2);
     }
 
     @FXML
-    public void plusThreeButtonF() {
+    public void plusThreeButtonF() throws IOException {
         addXtoScore(3);
     }
 
     @FXML
-    public void plusFourButtonF() {
+    public void plusFourButtonF() throws IOException {
         addXtoScore(4);
     }
 
     @FXML
-    public void minusOneButtonF() {
+    public void minusOneButtonF() throws IOException {
         addXtoScore(-1);
     }
 
     @FXML
-    public void minusTwoButtonF() {
+    public void minusTwoButtonF() throws IOException {
         addXtoScore(-2);
     }
 
     @FXML
-    public void minusThreeButtonF() {
+    public void minusThreeButtonF() throws IOException {
         addXtoScore(-3);
     }
 
     @FXML
-    public void minusFourButtonF() {
+    public void minusFourButtonF() throws IOException {
         addXtoScore(-4);
     }
+
 }

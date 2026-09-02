@@ -59,6 +59,14 @@ public class ScoreboardController {
 
     @FXML
     private Text strikes;
+
+    private Game game;
+
+    public void setGame(Game gameModel) {
+        this.game = gameModel;
+        tm1Score.textProperty().bind(game.getTeam1Points());
+        tm2Score.textProperty().bind(game.getTeam2Points());
+    }
 }
 
 

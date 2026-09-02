@@ -1,31 +1,36 @@
 package com.example.baseballscoreboard;
 
-public class Game {
-    private static boolean team1turn = true;
-    private static int team1Points = 0;
-    private static int team2Points = 0;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
-    public static int getTeam2Points() {
+public class Game {
+    private boolean team1turn = true;
+    private SimpleStringProperty team1Points = new SimpleStringProperty(String.valueOf(0));
+    private SimpleStringProperty team2Points = new SimpleStringProperty(String.valueOf(0));
+
+    public SimpleStringProperty getTeam2Points() {
         return team2Points;
     }
 
-    public static void setTeam2Points(int team2Points) {
-        Game.team2Points = team2Points;
+    public void setTeam2Points(int team2PointsInt) {
+        this.team2Points.set(String.valueOf(team2PointsInt));
     }
 
-    public static int getTeam1Points() {
+    public SimpleStringProperty getTeam1Points() {
         return team1Points;
     }
 
-    public static void setTeam1Points(int team1Points) {
-        Game.team1Points = team1Points;
+    public void setTeam1Points(int team1PointsInt) {
+        this.team1Points.set(String.valueOf(team1PointsInt));
     }
 
-    public static boolean isTeam1turn() {
+    public boolean isTeam1turn() {
         return team1turn;
     }
 
-    public static void setTeam1turn(boolean team1turn) {
-        Game.team1turn = team1turn;
+    public void setTeam1turn(boolean team1turn) {
+        this.team1turn = team1turn;
     }
 }
