@@ -7,8 +7,36 @@ import javafx.beans.property.StringProperty;
 
 public class Game {
     private boolean team1turn = true;
-    private SimpleStringProperty team1Points = new SimpleStringProperty(String.valueOf(0));
-    private SimpleStringProperty team2Points = new SimpleStringProperty(String.valueOf(0));
+    private final SimpleStringProperty team1Points = new SimpleStringProperty(String.valueOf(0));
+    private final SimpleStringProperty team2Points = new SimpleStringProperty(String.valueOf(0));
+    private final SimpleStringProperty balls = new SimpleStringProperty(String.valueOf(0));
+    private final SimpleStringProperty strikes = new SimpleStringProperty(String.valueOf(0));
+    private final SimpleStringProperty outs = new SimpleStringProperty(String.valueOf(0));
+
+    public SimpleStringProperty getOuts() {
+        return outs;
+    }
+
+    public void setOuts(int outsInt) {
+        this.outs.set(String.valueOf(outsInt));
+    }
+
+    public SimpleStringProperty getBalls() {
+        return balls;
+    }
+
+    public void setBalls(int ballsInt) {
+        this.balls.set(String.valueOf(ballsInt));
+    }
+
+    public SimpleStringProperty getStrikes() {
+        return strikes;
+    }
+
+    public void setStrikes(int strikesInt) {
+        this.strikes.set(String.valueOf(strikesInt));
+    }
+
 
     public SimpleStringProperty getTeam2Points() {
         return team2Points;

@@ -5,10 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
 
@@ -43,6 +40,12 @@ public class ConsoleController {
 
     @FXML
     private MenuButton teamSelect;
+
+    @FXML
+    private MenuItem tm1Select;
+
+    @FXML
+    private MenuItem tm2Select;
 
     @FXML
     private Button ballButton;
@@ -137,6 +140,7 @@ public class ConsoleController {
     @FXML
     private MenuButton selectPitcher;
 
+
     @FXML
     private Button addPitch;
 
@@ -149,12 +153,18 @@ public class ConsoleController {
     @FXML
     private TextArea pitcherStats;
 
+    @FXML
+    private Button resetCount;
+
     private Game game;
 
     public void setGame(Game gameModel) {
         this.game = gameModel;
         consoleTm1Score.textProperty().bind(game.getTeam1Points());
         consoleTm2Score.textProperty().bind(game.getTeam2Points());
+        consoleBallCount.textProperty().bind(game.getBalls());
+        consoleStrikeCount.textProperty().bind(game.getStrikes());
+        consoleOutCount.textProperty().bind(game.getOuts());
     }
 
     // Console Methods
@@ -205,6 +215,64 @@ public class ConsoleController {
     @FXML
     public void minusFourButtonF() throws IOException {
         addXtoScore(-4);
+    }
+
+    @FXML
+    public void tm1OnOffense() {
+        game.setTeam1turn(true);
+    }
+
+    @FXML
+    public void tm2OnOffense() {
+        game.setTeam1turn(false);
+    }
+
+    private void addOrRemoveBall(int number) {
+        game.setBalls(Integer.parseInt(game.getBalls().getValue()) + number);
+    }
+
+    @FXML
+    public void addBall() {
+        addOrRemoveBall(1);
+    }
+
+    @FXML
+    public void removeBall() {
+        addOrRemoveBall(-1);
+    }
+
+    private void addOrRemoveStrike(int number) {
+        game.setStrikes(Integer.parseInt(game.getStrikes().getValue()) + number);
+    }
+
+    @FXML
+    public void addStrike() {
+        addOrRemoveStrike(1);
+    }
+
+    @FXML
+    public void removeStrike() {
+        addOrRemoveStrike(-1);
+    }
+
+    private void addOrRemoveOuts(int number) {
+        game.setOuts(Integer.parseInt(game.getOuts().getValue()) + number);
+    }
+
+    @FXML
+    public void addOut() {
+        addOrRemoveOuts(1);
+    }
+
+    @FXML
+    public void removeOut() {
+        addOrRemoveOuts(-1);
+    }
+
+    @FXML
+    public void resetCount() {
+        game.setBalls(0);
+        game.setStrikes(0);
     }
 
 }

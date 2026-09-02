@@ -12,7 +12,7 @@
       <Button fx:id="thirdBase" layoutX="50.0" layoutY="137.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" rotate="45.0" />
       <Button fx:id="firstBase" layoutX="206.0" layoutY="137.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" rotate="45.0" />
       <Button fx:id="secondBase" layoutX="129.0" layoutY="54.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" rotate="45.0" />
-      <Text fx:id="outCount" layoutX="113.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 OUTS">
+      <Text fx:id="outCount" layoutX="113.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font name="Gadugi" size="40.0" />
          </font>
@@ -23,22 +23,22 @@
             <Font size="65.0" />
          </font>
       </Text>
-      <Text fx:id="tm2Score" layoutX="758.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="tm2Score" layoutX="765.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
-            <Font name="System Bold" size="250.0" />
+            <Font name="System Bold" size="210.0" />
          </font>
       </Text>
-      <Text fx:id="tm1Score" layoutX="450.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="tm1Score" layoutX="437.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
-            <Font name="System Bold" size="250.0" />
+            <Font name="System Bold" size="210.0" />
          </font>
       </Text>
-      <Text fx:id="tm2Name" layoutX="760.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM2">
+      <Text fx:id="tm2Name" layoutX="764.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM2">
          <font>
             <Font size="63.0" />
          </font>
       </Text>
-      <Text fx:id="tm1Name" layoutX="462.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM1">
+      <Text fx:id="tm1Name" layoutX="436.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM1">
          <font>
             <Font size="63.0" />
          </font>
@@ -78,6 +78,11 @@
       <Text fx:id="strikes" layoutX="847.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font name="System Bold" size="96.0" />
+         </font>
+      </Text>
+      <Text fx:id="outCount1" layoutX="147.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OUTS">
+         <font>
+            <Font name="Gadugi" size="40.0" />
          </font>
       </Text>
    </children>

@@ -66,6 +66,9 @@ public class ScoreboardController {
         this.game = gameModel;
         tm1Score.textProperty().bind(game.getTeam1Points());
         tm2Score.textProperty().bind(game.getTeam2Points());
+        balls.textProperty().bind(game.getBalls());
+        strikes.textProperty().bind(game.getStrikes());
+        outCount.textProperty().bind(game.getOuts());
     }
 }
 

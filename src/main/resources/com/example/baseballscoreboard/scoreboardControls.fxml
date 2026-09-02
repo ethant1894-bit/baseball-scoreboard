@@ -62,16 +62,16 @@
       </Text>
       <MenuButton fx:id="teamSelect" layoutX="372.0" layoutY="94.0" mnemonicParsing="false" text="Team Select">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem fx:id="tm1Select" mnemonicParsing="false" onAction="#tm1OnOffense" text="TM1" />
+          <MenuItem fx:id="tm2Select" mnemonicParsing="false" onAction="#tm2OnOffense" text="TM2" />
         </items>
       </MenuButton>
-      <Button fx:id="ballButton" layoutX="214.0" layoutY="142.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-color: #00FF00;" text="BALL" textFill="WHITE">
+      <Button fx:id="ballButton" layoutX="214.0" layoutY="142.0" mnemonicParsing="false" onAction="#addBall" prefHeight="38.0" prefWidth="80.0" style="-fx-background-color: #00FF00;" text="BALL" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="strikeButton" layoutX="313.0" layoutY="143.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" style="-fx-background-color: FF0000;" text="STRIKE" textFill="WHITE">
+      <Button fx:id="strikeButton" layoutX="313.0" layoutY="143.0" mnemonicParsing="false" onAction="#addStrike" prefHeight="38.0" prefWidth="80.0" style="-fx-background-color: FF0000;" text="STRIKE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -79,15 +79,15 @@
       <Button fx:id="secondBaseButton" layoutX="100.0" layoutY="184.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
       <Button fx:id="thirdBaseButton" layoutX="41.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
       <Button fx:id="firstBaseButton" layoutX="154.0" layoutY="245.0" maxHeight="66.0" maxWidth="66.0" minHeight="66.0" minWidth="66.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="66.0" rotate="45.0" />
-      <Button fx:id="outButton" layoutX="504.0" layoutY="141.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #000000;" text="OUT" textFill="WHITE">
+      <Button fx:id="outButton" layoutX="504.0" layoutY="141.0" mnemonicParsing="false" onAction="#addOut" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #000000;" text="OUT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
       <Button fx:id="resetBases" layoutX="94.0" layoutY="334.0" mnemonicParsing="false" text="Reset Bases" />
-      <Button fx:id="removeOut" layoutX="510.0" layoutY="191.0" mnemonicParsing="false" text="Remove Out" />
-      <Button fx:id="removeStrike" layoutX="307.0" layoutY="191.0" mnemonicParsing="false" text="Remove Strike" />
-      <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" text="Remove Ball" />
+      <Button fx:id="removeOut" layoutX="510.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeOut" text="Remove Out" />
+      <Button fx:id="removeStrike" layoutX="307.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeStrike" text="Remove Strike" />
+      <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeBall" text="Remove Ball" />
       <Button fx:id="inningChangeToggle" layoutX="683.0" layoutY="258.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" layoutX="320.0" layoutY="243.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="325.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
@@ -113,7 +113,7 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fx:id="consoleOutCount" layoutX="432.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Outs" />
+      <Text fx:id="consoleOutCount" layoutX="432.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
       <Polygon fx:id="consoleInningIndicator" layoutX="592.0" layoutY="316.0" points="-21.600006103515625, -14.5999755859375, 21.79998779296875, -14.5999755859375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
       <Text fx:id="consoleInningNumber" layoutX="615.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
@@ -163,5 +163,11 @@
             <Font size="40.0" />
          </font>
       </Text>
+      <Button fx:id="resetCount" layoutX="641.0" layoutY="143.0" mnemonicParsing="false" onAction="#resetCount" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: FFA200;" text="RESET COUNT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text layoutX="443.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Outs" />
    </children>
 </AnchorPane>
