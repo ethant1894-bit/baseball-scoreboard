@@ -178,6 +178,8 @@ public class ConsoleController {
         firstBaseButton.backgroundProperty().bind(Bindings.when(game.getFirstBase()).then(onBaseBG).otherwise(notOnBaseBG));
         secondBaseButton.backgroundProperty().bind(Bindings.when(game.getSecondBase()).then(onBaseBG).otherwise(notOnBaseBG));
         thirdBaseButton.backgroundProperty().bind(Bindings.when(game.getThirdBase()).then(onBaseBG).otherwise(notOnBaseBG));
+        consoleTm1Name.textProperty().bind(game.getTm1Name());
+        consoleTm2Name.textProperty().bind(game.getTm2Name());
     }
 
     // Console Methods
@@ -318,6 +320,19 @@ public class ConsoleController {
         game.setFirstBase(false);
         game.setSecondBase(false);
         game.setThirdBase(false);
+    }
+
+    @FXML
+    public void setNames() {
+        String tm1NameValue = tm1NameField.getText();
+        String tm2NameValue = tm2NameField.getText();
+        if (!tm1NameValue.isEmpty() && tm1NameValue.length() < 4) {
+            game.setTm1Name(tm1NameValue);
+        } if (!tm2NameValue.isEmpty() && tm2NameValue.length() < 4) {
+            game.setTm2Name(tm2NameValue);
+        }
+        tm1NameField.clear();
+        tm2NameField.clear();
     }
 
 }

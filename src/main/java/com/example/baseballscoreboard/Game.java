@@ -17,6 +17,27 @@ public class Game {
     private final SimpleBooleanProperty secondBase = new SimpleBooleanProperty(false);
     private final SimpleBooleanProperty thirdBase = new SimpleBooleanProperty(false);
 
+
+    // Team Names
+    private final SimpleStringProperty tm1Name = new SimpleStringProperty("TM1");
+    private final SimpleStringProperty tm2Name = new SimpleStringProperty("TM2");
+
+    public SimpleStringProperty getTm1Name() {
+        return tm1Name;
+    }
+
+    public void setTm1Name(String newName) {
+        this.tm1Name.set(newName);
+    }
+
+    public SimpleStringProperty getTm2Name() {
+        return tm2Name;
+    }
+
+    public void setTm2Name(String newName) {
+        this.tm2Name.set(newName);
+    }
+
     public SimpleBooleanProperty getFirstBase() {
         return firstBase;
     }

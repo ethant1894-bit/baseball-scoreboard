@@ -156,7 +156,7 @@
       <Line endX="14.0" layoutX="406.0" layoutY="372.0" startX="14.0" startY="252.0" />
       <TextField fx:id="tm1NameField" layoutX="317.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
       <TextField fx:id="tm2NameField" layoutX="479.0" layoutY="321.0" prefHeight="26.0" prefWidth="43.0" />
-      <Button fx:id="setNameButton" layoutX="384.0" layoutY="321.0" mnemonicParsing="false" text="Set Names" />
+      <Button fx:id="setNameButton" layoutX="384.0" layoutY="321.0" mnemonicParsing="false" onAction="#setNames" text="Set Names" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="445.0" layoutY="265.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text fx:id="consoleTm2Score" layoutX="447.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>

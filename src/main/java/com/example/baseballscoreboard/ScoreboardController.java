@@ -82,6 +82,8 @@ public class ScoreboardController {
         firstBase.backgroundProperty().bind(Bindings.when(game.getFirstBase()).then(onBaseBG).otherwise(notOnBaseBG));
         secondBase.backgroundProperty().bind(Bindings.when(game.getSecondBase()).then(onBaseBG).otherwise(notOnBaseBG));
         thirdBase.backgroundProperty().bind(Bindings.when(game.getThirdBase()).then(onBaseBG).otherwise(notOnBaseBG));
+        tm1Name.textProperty().bind(game.getTm1Name());
+        tm2Name.textProperty().bind(game.getTm2Name());
     }
 }
 
