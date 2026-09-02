@@ -88,7 +88,7 @@
       <Button fx:id="removeOut" layoutX="510.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeOut" text="Remove Out" />
       <Button fx:id="removeStrike" layoutX="307.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeStrike" text="Remove Strike" />
       <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeBall" text="Remove Ball" />
-      <Button fx:id="inningChangeToggle" layoutX="683.0" layoutY="258.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
+      <Button fx:id="inningChangeToggle" layoutX="682.0" layoutY="274.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" layoutX="320.0" layoutY="243.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="325.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text fx:id="consoleTm1Name" layoutX="349.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM1" />
@@ -114,14 +114,14 @@
          </font>
       </Text>
       <Text fx:id="consoleOutCount" layoutX="432.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
-      <Polygon fx:id="consoleInningIndicator" layoutX="592.0" layoutY="316.0" points="-21.600006103515625, -14.5999755859375, 21.79998779296875, -14.5999755859375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fx:id="consoleInningNumber" layoutX="615.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Polygon fx:id="consoleInningIndicator" layoutX="591.0" layoutY="332.0" points="-21.600006103515625, -14.5999755859375, 21.79998779296875, -14.5999755859375, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="consoleInningNumber" layoutX="614.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font size="61.0" />
          </font>
       </Text>
-      <Button fx:id="addInning" layoutX="701.0" layoutY="227.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="+1 Inning" />
-      <Button fx:id="removeInning" layoutX="701.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="-1 Inning" />
+      <Button fx:id="addInning" layoutX="700.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="+1 Inning" />
+      <Button fx:id="removeInning" layoutX="700.0" layoutY="320.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="-1 Inning" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d2d2" height="252.0" layoutY="372.0" stroke="#999999" strokeType="INSIDE" width="840.0" />
       <MenuButton fx:id="selectBatter" layoutX="51.0" layoutY="433.0" mnemonicParsing="false" text="Select Batter">
         <items>
@@ -163,11 +163,16 @@
             <Font size="40.0" />
          </font>
       </Text>
-      <Button fx:id="resetCount" layoutX="641.0" layoutY="143.0" mnemonicParsing="false" onAction="#resetCount" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: FFA200;" text="RESET COUNT" textFill="WHITE">
+      <Button fx:id="resetCount" layoutX="642.0" layoutY="143.0" mnemonicParsing="false" onAction="#resetCount" prefHeight="35.0" prefWidth="122.0" style="-fx-background-color: FFA200;" text="RESET COUNT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
       <Text layoutX="443.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Outs" />
+      <Button fx:id="resetOuts" layoutX="642.0" layoutY="191.0" mnemonicParsing="false" onAction="#resetOuts" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #0000FF;" text="RESET OUTS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

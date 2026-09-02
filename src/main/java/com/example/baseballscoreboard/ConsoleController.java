@@ -162,6 +162,9 @@ public class ConsoleController {
     @FXML
     private Button resetCount;
 
+    @FXML
+    private Button resetOuts;
+
     private Game game;
 
     // Base Toggle Colours
@@ -288,6 +291,11 @@ public class ConsoleController {
     public void resetCount() {
         game.setBalls(0);
         game.setStrikes(0);
+    }
+
+    @FXML
+    public void resetOuts() {
+        game.setOuts(0);
     }
 
     private void toggleBase(int base) {
