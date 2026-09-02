@@ -183,11 +183,12 @@ public class ConsoleController {
         thirdBaseButton.backgroundProperty().bind(Bindings.when(game.getThirdBase()).then(onBaseBG).otherwise(notOnBaseBG));
         consoleTm1Name.textProperty().bind(game.getTm1Name());
         consoleTm2Name.textProperty().bind(game.getTm2Name());
+        tm1Select.textProperty().bind(game.getTm1Name());
+        tm2Select.textProperty().bind(game.getTm2Name());
     }
 
     // Console Methods
-    // TODO: Add proper error checking through try/catch
-    private void addXtoScore(int addition) throws IOException {
+    private void addXtoScore(int addition) {
         if (game.isTeam1turn()) {
             game.setTeam1Points(Integer.parseInt(game.getTeam1Points().get()) + addition);
         } else {
@@ -196,53 +197,55 @@ public class ConsoleController {
     }
 
     @FXML
-    public void plusOneButtonF() throws IOException {
+    public void plusOneButtonF() {
         addXtoScore(1);
     }
 
     @FXML
-    public void plusTwoButtonF() throws IOException {
+    public void plusTwoButtonF() {
         addXtoScore(2);
     }
 
     @FXML
-    public void plusThreeButtonF() throws IOException {
+    public void plusThreeButtonF() {
         addXtoScore(3);
     }
 
     @FXML
-    public void plusFourButtonF() throws IOException {
+    public void plusFourButtonF() {
         addXtoScore(4);
     }
 
     @FXML
-    public void minusOneButtonF() throws IOException {
+    public void minusOneButtonF() {
         addXtoScore(-1);
     }
 
     @FXML
-    public void minusTwoButtonF() throws IOException {
+    public void minusTwoButtonF() {
         addXtoScore(-2);
     }
 
     @FXML
-    public void minusThreeButtonF() throws IOException {
+    public void minusThreeButtonF() {
         addXtoScore(-3);
     }
 
     @FXML
-    public void minusFourButtonF() throws IOException {
+    public void minusFourButtonF() {
         addXtoScore(-4);
     }
 
     @FXML
     public void tm1OnOffense() {
         game.setTeam1turn(true);
+        teamSelect.setText(game.getTm1Name().get());
     }
 
     @FXML
     public void tm2OnOffense() {
         game.setTeam1turn(false);
+        teamSelect.setText(game.getTm2Name().get());
     }
 
     private void addOrRemoveBall(int number) {
