@@ -47,3 +47,8 @@ Keep in mind that while reset buttons are included, we did not include automatic
 The goal is to keep everything manual and as controllable by the operator as possible.
 Especially in cases where calls are overturned: e.g. If a strike is overturned, we don't want the operator to have to reset the count if it was automatically cleared
 while also having to subtract a count.
+
+#### Author & Contact
+Ethan Tino, Computer Science Undergrad (as of 2026)
+* Email: ethant1894@gmail.com
+* [LinkedIn](https://www.linkedin.com/in/ethan-tino-08849628b/)
