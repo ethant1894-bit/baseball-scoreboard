@@ -88,7 +88,7 @@
       <Button fx:id="removeOut" layoutX="510.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeOut" text="Remove Out" />
       <Button fx:id="removeStrike" layoutX="307.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeStrike" text="Remove Strike" />
       <Button fx:id="removeBall" layoutX="213.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeBall" text="Remove Ball" />
-      <Button fx:id="inningChangeToggle" layoutX="682.0" layoutY="274.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
+      <Button fx:id="inningChangeToggle" layoutX="682.0" layoutY="274.0" mnemonicParsing="false" onAction="#changeInning" prefHeight="42.0" prefWidth="114.0" text="Toggle Top or Bottom" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" layoutX="320.0" layoutY="243.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="42.0" layoutX="325.0" layoutY="264.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text fx:id="consoleTm1Name" layoutX="349.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TM1" />
@@ -120,8 +120,8 @@
             <Font size="61.0" />
          </font>
       </Text>
-      <Button fx:id="addInning" layoutX="700.0" layoutY="243.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="+1 Inning" />
-      <Button fx:id="removeInning" layoutX="700.0" layoutY="320.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="-1 Inning" />
+      <Button fx:id="addInning" layoutX="700.0" layoutY="243.0" mnemonicParsing="false" onAction="#inningUp" prefHeight="26.0" prefWidth="78.0" text="+1 Inning" />
+      <Button fx:id="removeInning" layoutX="700.0" layoutY="320.0" mnemonicParsing="false" onAction="#inningDown" prefHeight="26.0" prefWidth="78.0" text="-1 Inning" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d2d2" height="252.0" layoutY="372.0" stroke="#999999" strokeType="INSIDE" width="840.0" />
       <MenuButton fx:id="selectBatter" layoutX="51.0" layoutY="433.0" mnemonicParsing="false" text="Select Batter">
         <items>

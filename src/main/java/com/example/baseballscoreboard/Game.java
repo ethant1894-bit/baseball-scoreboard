@@ -22,6 +22,32 @@ public class Game {
     private final SimpleStringProperty tm1Name = new SimpleStringProperty("TM1");
     private final SimpleStringProperty tm2Name = new SimpleStringProperty("TM2");
 
+    // Inning Control
+    private final SimpleStringProperty inningNum = new SimpleStringProperty(String.valueOf(1));
+    private final SimpleBooleanProperty topOfInning = new SimpleBooleanProperty(true);
+
+    public SimpleBooleanProperty getTopOfInning() {
+        return topOfInning;
+    }
+
+    public boolean isTopOfInning() {
+        return topOfInning.get();
+    }
+
+    public void setTopOfInning() {
+        this.topOfInning.set(!getTopOfInning().get());
+    }
+
+    public SimpleStringProperty getInningNum() {
+        return inningNum;
+    }
+
+    public void setInningNum(int inning) {
+        if (inning >= 0) {
+            this.inningNum.set(String.valueOf(inning));
+        }
+    }
+
     public SimpleStringProperty getTm1Name() {
         return tm1Name;
     }

@@ -14,6 +14,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Scale;
 
 import java.io.IOException;
 
@@ -183,8 +184,18 @@ public class ConsoleController {
         thirdBaseButton.backgroundProperty().bind(Bindings.when(game.getThirdBase()).then(onBaseBG).otherwise(notOnBaseBG));
         consoleTm1Name.textProperty().bind(game.getTm1Name());
         consoleTm2Name.textProperty().bind(game.getTm2Name());
+
         tm1Select.textProperty().bind(game.getTm1Name());
         tm2Select.textProperty().bind(game.getTm2Name());
+
+        consoleInningNumber.textProperty().bind(game.getInningNum());
+        Scale flippedTriangle = new Scale(1, 1, consoleInningIndicator.getBoundsInLocal().getMinX()
+                + consoleInningIndicator.getBoundsInLocal().getWidth() / 2, consoleInningIndicator.getBoundsInLocal().getMinY() +
+                consoleInningIndicator.getBoundsInLocal().getHeight() / 2);
+        consoleInningIndicator.getTransforms().add(flippedTriangle);
+        game.getTopOfInning().addListener((obs, oldValue, newValue) -> {
+            flippedTriangle.setY(newValue ? -1 : 1);
+        });
     }
 
     // Console Methods
@@ -346,4 +357,22 @@ public class ConsoleController {
         tm2NameField.clear();
     }
 
+    private void inningAdjust(int number) {
+        game.setInningNum(Integer.parseInt(game.getInningNum().getValue()) + number);
+    }
+
+    @FXML
+    public void inningUp() {
+        inningAdjust(1);
+    }
+
+    @FXML
+    public void inningDown() {
+        inningAdjust(-1);
+    }
+
+    @FXML
+    public void changeInning() {
+        game.setTopOfInning();
+    }
 }
