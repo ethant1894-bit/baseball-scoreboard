@@ -2,6 +2,8 @@ package com.example.baseballscoreboard;
 
 import javafx.beans.property.*;
 
+import java.util.HashMap;
+
 public class Game {
     private boolean team1turn = true;
 
@@ -29,6 +31,11 @@ public class Game {
     public SimpleBooleanProperty getTopOfInning() {
         return topOfInning;
     }
+
+    // Player Team Containers
+    // HashMap for substitutions in the batting order
+    public HashMap<Integer, Player> team1 = new HashMap<>();
+    public HashMap<Integer, Player> team2 = new HashMap<>();
 
     public boolean isTopOfInning() {
         return topOfInning.get();
