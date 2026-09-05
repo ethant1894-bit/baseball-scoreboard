@@ -54,4 +54,26 @@ public class Player {
     public void setHits(int hits) {
         this.hits = hits;
     }
+
+    // Hits and No Hits
+
+    // If it was a base hit, add hit.
+    public void hitAttempt(boolean baseHit) {
+        if (baseHit) {
+            setHits(getHits() + 1);
+        }
+        setAtBats(getAtBats() + 1);
+    }
+
+    // Undo Hit or Undo No Hit.
+    public void removeHitAttempt(boolean baseHit) {
+        if (baseHit && (getHits() > 0)) {
+            setHits(getHits() - 1);
+        }
+        if (getAtBats() > 0) {
+            setAtBats(getAtBats() - 1);
+        }
+    }
+
+
 }
